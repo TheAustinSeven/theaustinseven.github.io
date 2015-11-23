@@ -20,7 +20,7 @@
 				</header>
 				<nav id="nav">
 					<ul>
-            {% if page.url == "/" %}
+            {% if page.title == "About" %}
               <li><a href="#one" class="active">About</a></li>
               <li><a href="#whatnow">What I'm doing now</a></li>
               <li><a href="#projects">Projects</a></li>
@@ -30,6 +30,8 @@
             {% endif %}
 						<li><a href="/blog">Blog</a></li>
             <li><a href="/projects">Projects Page</a></li>
+            <li><a href="/blog">{{page.title}}</a></li>
+            <li><a href="/projects">{{"About"}}</a></li>
 					</ul>
 				</nav>
 				<footer>
