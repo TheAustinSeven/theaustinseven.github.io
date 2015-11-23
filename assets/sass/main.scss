@@ -887,7 +887,7 @@
 		top: 0;
 		width: $size-header;
 
-		@if _misc(header-side) == 'right' {
+		@if _misc(header-side) == 'left' {
 			right: 0;
 		}
 		@else {
@@ -993,7 +993,7 @@
 	#wrapper {
 		background: _palette(bg);
 
-		@if _misc(header-side) == 'right' {
+		@if _misc(header-side) == 'left' {
 			padding-right: $size-header;
 		}
 		@else {
@@ -1095,7 +1095,7 @@
 		/* Wrapper */
 
 			#wrapper {
-				@if _misc(header-side) == 'right' {
+				@if _misc(header-side) == 'left' {
 					padding-right: $size-header;
 				}
 				@else {
@@ -1136,7 +1136,7 @@
 		/* Wrapper */
 
 			#wrapper {
-				@if _misc(header-side) == 'right' {
+				@if _misc(header-side) == 'left' {
 					padding-right: $size-header;
 				}
 				@else {
@@ -1190,7 +1190,7 @@
 				width: $size-header;
 				z-index: _misc(z-index-base) + 2;
 
-				@if _misc(header-side) == 'right' {
+				@if _misc(header-side) == 'left' {
 					@include vendor('transform', 'translateX(#{$size-header})');
 					right: 0;
 				}
@@ -1250,7 +1250,7 @@
 					padding: 0 1em;
 					width: 100%;
 
-					@if _misc(header-side) == 'right' {
+					@if _misc(header-side) == 'left' {
 						text-align: left;
 					}
 					@else {
@@ -1272,7 +1272,7 @@
 					border: 0;
 					outline: 0;
 
-					@if _misc(header-side) == 'right' {
+					@if _misc(header-side) == 'left' {
 						right: 0;
 					}
 					@else {
@@ -1292,7 +1292,7 @@
 						top: 0;
 						width: 64px;
 
-						@if _misc(header-side) == 'right' {
+						@if _misc(header-side) == 'left' {
 							right: 0;
 						}
 						@else {
@@ -1305,7 +1305,7 @@
 			body {
 				&.header-visible {
 					#wrapper, #titleBar {
-						@if _misc(header-side) == 'right' {
+						@if _misc(header-side) == 'left' {
 							@include vendor('transform', 'translateX(#{$size-header * -1})');
 						}
 						@else {
@@ -1404,7 +1404,7 @@
 			#header {
 				width: $size-header;
 
-				@if _misc(header-side) == 'right' {
+				@if _misc(header-side) == 'left' {
 					@include vendor('transform', 'translateX(#{$size-header})');
 					right: 0;
 				}
@@ -1490,7 +1490,7 @@
 			body {
 				&.header-visible {
 					#wrapper, #titleBar {
-						@if _misc(header-side) == 'right' {
+						@if _misc(header-side) == 'left' {
 							@include vendor('transform', 'translateX(#{$size-header * -1})');
 						}
 						@else {

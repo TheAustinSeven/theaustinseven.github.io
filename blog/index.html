@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Austin Horning</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/profile.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Austin Horning</a></h1>
+					<p>A Ruby Ninja, C++ Wizard, and Computer<br />
+					   Nerd, programming for fun.</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#whatnow">What I'm doing now</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#accomplishments">Accomplishments</a></li>
+						<li><a href="/blog">Blog(Coming Soon)</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="http://twitter.com/TheAustinSeven" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.linkedin.com/in/austinhorning" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+						<li><a href="https://www.coinbase.com/checkouts/af0878ebbd28bb33a53f55c811812fae" class="icon fa-bitcoin"><span class="label">Bitcoin</span></a></li>
+						<li><a href="http://github.com/TheAustinSeven" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:austinseven@outlook.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>The Blog</h2>
+										<p>A Bit of What I'm Up To...</p>
+									</header>
+								</div>
+							</section>
+
+						<!-- Two -->	
+							
+              
+            {% for post in site.posts %}
+              <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+                <h2>
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+              </li>
+            {% endfor %}
+              
+              
+              
+              
+
+						<!-- 	quick reference for embedding code
+						<pre><code>i = 0;
+							while (!deck.isInOrder()) {
+							    print 'Iteration ' + i;
+							    deck.shuffle();
+							    i++;
+							}
+
+							print 'It took ' + i + ' iterations to sort the deck.';
+						</code></pre> -->
+									
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Austin Horning. All rights reserved.
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
