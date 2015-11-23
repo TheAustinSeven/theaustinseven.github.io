@@ -28,10 +28,21 @@
             {% else %}
               <li><a href="/">About</a></li>
             {% endif %}
-						<li><a href="/blog">Blog</a></li>
-            <li><a href="/projects">Projects Page</a></li>
-            <li><a href="/blog">{{page.title}}</a></li>
-            <li><a href="/projects">{{"About"}}</a></li>
+            
+            {% if page.title == "Blog" %}
+              <li><a href="/blog" class="active">Blog</a></li>
+            {% else %}
+              <li><a href="/blog">Blog</a></li>
+            {% endif %}
+            
+            {% if page.title == "Projects" %}
+              <li><a href="/projects" class="active">Projects Page</a></li>
+            {% else %}
+              <li><a href="/projects">Projects Page</a></li>
+            {% endif %}
+						
+            
+
 					</ul>
 				</nav>
 				<footer>
