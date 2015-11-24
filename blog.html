@@ -16,15 +16,47 @@ title: Blog
 
 <!-- Two -->	
 	<section id="two">
-		<div class="container">
-			{% for post in site.posts %}
-	        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+		{% for post in site.posts %}
+			<div class="container">
+				{% if post.image %}
+					<a href="{{ post.url }}"><image src="{{ post.image }}" style="width: 100%"></a>
+				{% endif %}
+				
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-	        <h2>
-	          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-	        </h2>
-					
-					{{ post.content }}
-	    {% endfor %}
-		</div>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+				
+				{{ post.content | strip_html | truncatewords:100}}...<br>
+          <a href="{{ post.url }}">Read more...</a><br><br>
+			</div>
+    {% endfor %}
+		
+		<!-- Pagination links -->
+		{% if paginator.total_pages > 1 %}
+			<div class="pagination">
+			  {% if paginator.previous_page %}
+			    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+			  {% else %}
+			    <span>&laquo; Prev</span>
+			  {% endif %}
+
+			  {% for page in (1..paginator.total_pages) %}
+			    {% if page == paginator.page %}
+			      <em>{{ page }}</em>
+			    {% elsif page == 1 %}
+			      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+			    {% else %}
+			      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+			    {% endif %}
+			  {% endfor %}
+
+			  {% if paginator.next_page %}
+			    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+			  {% else %}
+			    <span>Next &raquo;</span>
+			  {% endif %}
+			</div>
+		{% endif %}
 	</section>  
