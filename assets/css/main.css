@@ -1872,7 +1872,8 @@ input[type="button"],
     #header a:hover {
       color: #ffffff !important; }
   #header > header {
-    padding: 3em; }
+    padding: 1.5em;
+    padding-bottom: 0.5em !important}
     #header > header .avatar {
       display: block;
       margin: 0 auto 2.25em auto;
@@ -1978,7 +1979,7 @@ input[type="button"],
     #header > header {
       padding: 2em; }
     #header > footer {
-      padding: 1.5em; }
+      padding: 1.0em; }
 
   /* Wrapper */
   #wrapper {
