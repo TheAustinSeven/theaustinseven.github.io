@@ -98,7 +98,7 @@
 						hideOnSwipe: true,
 						resetScroll: true,
 						resetForms: true,
-						side: 'left',
+						side: 'right',
 						target: $body,
 						visibleClass: 'header-visible'
 					});
