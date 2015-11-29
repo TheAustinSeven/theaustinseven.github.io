@@ -19,7 +19,7 @@ title: Blog
 		{% for post in site.posts %}
 			<div class="container">
 				{% if post.image %}
-					<a href="{{ post.url }}"><image src="{{ post.image }}" style="width: 100%"></a>
+					<a href="{{ post.url }}" style="border-bottom: 0px !important"><image src="{{ post.image }}" style="width: 100%"></a>
 				{% endif %}
 				
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
