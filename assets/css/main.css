@@ -1888,7 +1888,7 @@ input[type="button"],
   #header > footer {
     bottom: 0;
     left: 0;
-    padding: 2em;
+    padding: 0.5em;
     position: absolute;
     width: 100%; }
     #header > footer .icons {

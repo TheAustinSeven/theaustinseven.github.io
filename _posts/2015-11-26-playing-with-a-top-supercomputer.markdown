@@ -2,7 +2,8 @@
 layout: post
 title:  "Playing With A Top 500 Supercomputer!"
 date:   2015-11-26 21:10:07 -0500
-categories: HPC Purdue 
+categories: HPC Purdue Conte Bogosort
+image: "/images/2015/conte.jpg"
 ---
 It's not everyday that someone allows you to run programs on a Top 500 Supercomputer, but I was very fortunate and got to do just that. I was given the opportunity to run programs in the standby queue of Conte, currently the 86th most powerful supercomputer in the world(at the time of writing), and the most powerful at a college(again, at the time of writing). Now before your brain explodes at the incredible power given to a mere student, understand that I wasn't exactly given power over the entire behemoth. I was given the ability to submit programs to queue that would wait until programs that were running on partitioned segments of the computer were finished, and then would allow me to run a program on up to 6 nodes, or 96 cores. Although this isn't nearly as awesome as having complete control of a computer such as Conte, it is still pretty freaking cool.
 
