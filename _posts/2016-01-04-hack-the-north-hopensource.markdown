@@ -9,13 +9,10 @@ Way back in September, I was a part of a team that rocked Hack the North, or rat
 
 The team consisted of:
 
-- Ben Zheng, a student from University of Waterloo who was tasked with integrating Moxtra's API into our app.
-
-- Shruti Appiah, also a student from University of Waterloo who took the lead on our front end development
-
-- Giorgio Delgado, a student from Wilfrid Laurier University, who ended up working on all parts of the app
-
-- and myself who rocked the backend
+- Ben Zheng, a student from University of Waterloo who was tasked with integrating Moxtra's API into our app. 
+- Shruti Appiah, also a student from University of Waterloo who took the lead on our front end development. 
+- Giorgio Delgado, a student from Wilfrid Laurier University, who ended up working on all parts of the app. 
+- and myself who rocked the backend. 
 
 We were give a brutal course in Murphy's Law, as everything that could go wrong, went wrong. This was in no way a usable website. Every other page would crash the app, the UI was buggy as we hadn't had time to change the home page so that it would look like you were logged in, and our stylesheets were haphazardly thrown together. Miraculously we were able to demo our app without it breaking in front of the judges or and of the sponsoring organizations.
 
