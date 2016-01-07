@@ -2,14 +2,15 @@
 layout: post
 title:  "Playing With A Top 500 Supercomputer!"
 date:   2015-11-26 21:10:07 -0500
-categories: HPC Purdue Conte Bogosort
+category: Purdue
+tags: [Conte, Purdue, HPC, C++]
 image: "/images/2015/conte.jpg"
 ---
 It's not everyday that someone allows you to run programs on a Top 500 Supercomputer, but I was very fortunate and got to do just that. I was given the opportunity to run programs in the standby queue of Conte, currently the 86th most powerful supercomputer in the world(at the time of writing), and the most powerful at a college(again, at the time of writing). Now before your brain explodes at the incredible power given to a mere student, understand that I wasn't exactly given power over the entire behemoth. I was given the ability to submit programs to queue that would wait until programs that were running on partitioned segments of the computer were finished, and then would allow me to run a program on up to 6 nodes, or 96 cores. Although this isn't nearly as awesome as having complete control of a computer such as Conte, it is still pretty freaking cool.
 
-When I was given access, I had a hard time coming up with what I wanted to do first with my newfound resources. The usual choice is to run a quick hello world program with MPI. I, however, being my usual sarcastic self, wanted to do something borderline outrageous. It took me a little thinking, but eventually I figured it out. I was going to use a supercomputer to bogosort a list. I know, I can already hear the cringing. 
+When I was given access, I had a hard time coming up with what I wanted to do first with my newfound resources. The usual choice is to run a quick hello world program with MPI. I, however, being my usual sarcastic self, wanted to do something borderline outrageous. It took me a little thinking, but eventually I figured it out. I was going to use a supercomputer to bogosort a list. I know, I can already hear the cringing.
 
-For everyone who is not familiar with bogosort, the algorithm randomizes a list, checks to see if it's sorted, and repeats that process until the list happens to be sorted. This leads to a best case time complexity of O(1), worst case of O(infinity), and an average of O(n!). Needless to say, this algorithm is horribly inefficient. 
+For everyone who is not familiar with bogosort, the algorithm randomizes a list, checks to see if it's sorted, and repeats that process until the list happens to be sorted. This leads to a best case time complexity of O(1), worst case of O(infinity), and an average of O(n!). Needless to say, this algorithm is horribly inefficient.
 
 Even though this program sounds like a cheap joke with no upside, I should say that this program helped me learn all of the essentials of MPI. It also gave me the opportunity to find a few cool tricks I didn't know about before.
 
@@ -18,7 +19,7 @@ The first trick I learned was the Fisher-Yates shuffle. This shuffling algorithm
 void shuffle_array(int * list, int size){
   int placeholder;
   int index;
-  
+
   for(int i = size; i > 0; i--){
     index = std::rand() % i;
     placeholder = list[index];
@@ -38,7 +39,7 @@ while(sorted_list_size < SORT_RANGE){
       MPI_Send(list + next_to_send, PARTITION_SIZE, MPI_INT, status.MPI_SOURCE, DATA_TAG, MPI_COMM_WORLD);
       next_to_send += PARTITION_SIZE;
       cout << "Node " << status.MPI_SOURCE << " sent restock.\n";
-      
+
     }
     else{
       MPI_Send(list, 1, MPI_INT, status.MPI_SOURCE, TERMINATE_TAG, MPI_COMM_WORLD);
@@ -50,4 +51,3 @@ while(sorted_list_size < SORT_RANGE){
 To see the rest of my code: [Here](https://github.com/TheAustinSeven/ClusterComputing/tree/master/mucking_around/Bogosort) is the github folder.
 
 To see the best guide I found on MPI: [http://mpitutorial.com/](http://mpitutorial.com/)
-
