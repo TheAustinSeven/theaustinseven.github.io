@@ -2,7 +2,6 @@
 layout: post
 title:  "Playing With A Top 500 Supercomputer!"
 date:   2015-11-26 21:10:07 -0500
-category: Purdue
 tags: [Conte, Purdue, HPC, C++]
 image: "/images/2015/conte.jpg"
 ---

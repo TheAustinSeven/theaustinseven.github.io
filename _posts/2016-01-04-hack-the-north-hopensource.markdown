@@ -2,7 +2,6 @@
 layout: post
 title:  "Hack The North: Hopen Source"
 date:   2016-1-4 12:00:07 -0500
-category: Hackathons
 image: "/images/2016/htn-moxtra.jpg"
 tags: [HopenSource, Hack-The-North, Hackathon, Rails, Ruby]
 ---

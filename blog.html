@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Blog
 ---
 
@@ -14,25 +14,25 @@ title: Blog
 		</div>
 	</section>
 
-<!-- Two -->	
+<!-- Two -->
 	<section id="two">
 		{% for post in site.posts %}
 			<div class="container">
 				{% if post.image %}
 					<a href="{{ post.url }}" style="border-bottom: 0px !important"><image src="{{ post.image }}" style="width: 100%"></a>
 				{% endif %}
-				
+
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-				
+
 				{{ post.content | strip_html | truncatewords:100}}...<br>
           <a href="{{ post.url }}">Read more...</a><br><br>
 			</div>
     {% endfor %}
-		
+
 		<!-- Pagination links -->
 		{% if paginator.total_pages > 1 %}
 			<div class="pagination">
@@ -59,4 +59,4 @@ title: Blog
 			  {% endif %}
 			</div>
 		{% endif %}
-	</section>  
+	</section>
