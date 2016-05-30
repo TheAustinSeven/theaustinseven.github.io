@@ -3,23 +3,12 @@ layout: page
 title: Blog
 ---
 
-
-<!-- One -->
-	<section id="one">
-		<div class="container">
-			<header class="major">
-				<h2>The Blog</h2>
-				<p>A Bit of What I'm Up To...</p>
-			</header>
-		</div>
-	</section>
-
 <!-- Two -->
 	<section id="two">
 		{% for post in site.posts %}
 			<div class="container">
 				{% if post.image %}
-					<a href="{{ post.url }}" style="border-bottom: 0px !important"><image src="{{ post.image }}" style="width: 100%"></a>
+					{% if post.url %}<a href="{{ post.url }}" style="border-bottom: 0px !important"><image src="{{ post.image }}" style="width: 100%"></a> {% endif %}
 				{% endif %}
 
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
