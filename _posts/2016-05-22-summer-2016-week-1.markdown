@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Summer Extravaganza: Week 1"
+date:   2016-5-22 18:42:07 -0700
+category: Projects
+image: "/images/2016/htn-moxtra.jpg"
+tags: [Rust, Go, Summer, Projects, OpenCL, Otter]
+---
