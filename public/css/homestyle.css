@@ -9,6 +9,6 @@ li.icon {
   margin-right: 2px;
   margin-left: 2px;
 }
-li > img {
+li > a > img {
   display:inline;
 }
