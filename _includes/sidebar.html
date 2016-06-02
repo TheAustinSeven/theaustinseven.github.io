@@ -7,7 +7,8 @@
           {{ site.title }}
         </a>
       </h2>
-      <p class="lead">{{ site.description }}</p>
+      <p class="lead" style="margin:0">Programming Wizard</p>
+      <p class="lead" style="font-size:100%;font-weight:bold;">(or at least something like that)</p>
     </div>
 
     <nav class="sidebar-nav">
@@ -27,7 +28,14 @@
         {% endif %}
       {% endfor %}
     </nav>
-
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <footer>
+			<ul class="icons">
+				<li><a href="http://twitter.com/TheAustinSeven" class="icon"><img src="/public/svg/white/twitter.svg" style="width:15%"></a></li>
+        <li><a href="https://www.linkedin.com/in/austinhorning" class="icon"><img src="/public/svg/white/linkedin.svg" style="width:15%"></a></li>
+				<li><a href="https://www.coinbase.com/checkouts/af0878ebbd28bb33a53f55c811812fae" class="icon"><img src="/public/svg/white/bitcoin.svg" style="width:15%"></a></li>
+				<li><a href="http://github.com/TheAustinSeven" class="icon"><img src="/public/svg/white/github.svg" style="width:15%"></a></li>
+				<li><a href="mailto:austinseven@outlook.com" class="icon"><img src="/public/svg/white/envelope.svg" style="width:15%"></a></li>
+			</ul>
+		</footer>
   </div>
 </div>
