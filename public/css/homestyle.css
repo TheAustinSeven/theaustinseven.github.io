@@ -1,9 +1,8 @@
 ul.icons {
-  cursor: default;
-  list-style: none;
-  padding-left: 0; }
-.icon {
   display:inline;
   position: relative;
   margin-right: 1px;
-  margin-left: 1px; }
+  margin-left: 1px;
+  cursor: default;
+  list-style: none;
+  padding-left: 0; }
