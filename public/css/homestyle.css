@@ -3,6 +3,5 @@ ul.icons {
   list-style: none;
   padding-left: 0; }
 .icon {
-  float:left;
-  position: relative;
-  width: 15%; }
+  display:inline;
+  position: relative;}
