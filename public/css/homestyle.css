@@ -1,8 +1,10 @@
 ul.icons {
+  cursor: default;
+  list-style: none;
+  padding-left: 0; }
+li.icon {
   display:inline !important;
   position: relative;
   margin-right: 1px;
   margin-left: 1px;
-  cursor: default;
-  list-style: none;
-  padding-left: 0; }
+}
