@@ -1,5 +1,5 @@
 ul.icons {
-  display:inline;
+  display:inline !important;
   position: relative;
   margin-right: 1px;
   margin-left: 1px;
