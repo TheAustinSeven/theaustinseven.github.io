@@ -4,4 +4,7 @@ ul.icons {
   padding-left: 0; }
 .icon {
   display:inline;
-  position: relative;}
+  position: relative;
+  margin-right: 1px
+  margin-left: 1px
+  margin-bottom: 10px}
