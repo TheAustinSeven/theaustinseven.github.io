@@ -1,15 +1,24 @@
 ul.icons {
   cursor: default;
   list-style: none;
-  padding-left: 0;
-  padding-right: 0;
+  margin:0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
 }
 li.icon {
-  display:inline !important;
+  display:block !important;
   position: relative;
   margin-right: 2px;
   margin-left: 2px;
+
 }
 li > a > img {
-  display:inline;
+  margin: 20px 0 0 0;
+}
+.sidebar-nav {
+  margin-left: 15px;
+}
+.inner {
+  margin-left: 20px;
 }
